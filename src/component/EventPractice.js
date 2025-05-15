@@ -6,7 +6,7 @@ const EventPractice = () => {
                 type="text"
                 name="message"
                 placeholder="input something"
-                onChange={(e) => {console.log(e)}}
+                onChange={(e) => {console.log(e.target.value)}}
             ></input>
         </div>
     );

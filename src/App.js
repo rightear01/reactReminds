@@ -1,14 +1,13 @@
-import "./App.css";
-import EventPractice from "./component/EventPractice";
+import './App.css';
+import KeyPro from './component/KeyPro';
+import RefBasic from './component/RefBasic';
 
 function App() {
-
-
   return (
     <div className="App">
-      <EventPractice></EventPractice>
+      <KeyPro></KeyPro>
     </div>
-  )
+  );
 }
 
 export default App;
