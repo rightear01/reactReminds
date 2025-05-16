@@ -15,6 +15,11 @@ const KeyPro = () => {
     setInputText(e.target.value);
   };
 
+  // 요소를 구분할 수 있는 값인 id를 통해 filter 메소드로 필터링 가능하다.
+  const onDelete = (id) => {
+    setNames(names.filter((name) => name.id !== id));
+  };
+
   const handleClick = () => {
     if (inputText.trim() === '') return;
 
@@ -24,22 +29,51 @@ const KeyPro = () => {
     };
     setNames([...names, newName]);
     setNextId(nextId + 1);
-    setInputText(''); // 입력창 초기화
+    setInputText('');
   };
 
   const nameList = names.map((name) => (
-    <li key={name.id} style={{ fontWeight: 500 }}>
+    <li
+      key={name.id}
+      style={{
+        width: '60%',
+        fontWeight: 500,
+        display: 'flex',
+        justifyContent: 'space-between',
+        marginBottom: '10px',
+      }}
+    >
       {name.text}
+      <button type="text" onClick={() => onDelete(name.id)}>
+        삭제
+      </button>
     </li>
   ));
 
   return (
     <div>
-      <div style={{ fontSize: '12px', fontWeight: 800, marginTop: '10px' }}>
-        " 리스트 추가하기 "
+      <div
+        style={{
+          fontSize: '32px',
+          fontWeight: 800,
+          marginTop: '10px',
+        }}
+      >
+        "리스트 CRUD"
       </div>
       <hr />
-      <ul>{nameList}</ul>
+      <ul
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          minHeight: '500px',
+          maxHeight: '500px',
+          overflowY: 'scroll',
+        }}
+      >
+        {nameList}
+      </ul>
       <hr />
       <input
         type="text"

@@ -1,11 +1,10 @@
 import './App.css';
-import KeyPro from './component/KeyPro';
-import RefBasic from './component/RefBasic';
+import Info2 from './component/Info2';
 
 function App() {
   return (
     <div className="App">
-      <KeyPro></KeyPro>
+      <Info2></Info2>
     </div>
   );
 }
