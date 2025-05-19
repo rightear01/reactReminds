@@ -1,10 +1,11 @@
 import './App.css';
-import Info2 from './component/Info2';
+import Average from './component/Average';
+import Info from './component/Info';
 
 function App() {
   return (
     <div className="App">
-      <Info2></Info2>
+      <Info></Info>
     </div>
   );
 }
