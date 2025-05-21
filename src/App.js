@@ -1,11 +1,10 @@
 import './App.css';
-import Average from './component/Average';
-import Info from './component/Info';
+import CSSModule from './component/CSSModule';
 
 function App() {
   return (
     <div className="App">
-      <Info></Info>
+      <CSSModule></CSSModule>
     </div>
   );
 }
